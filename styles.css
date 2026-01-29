@@ -24,7 +24,7 @@
   }
   
   .hero {
-    height: 800px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,17 +34,26 @@
     width: 480px;
     height: auto;
     max-width: none;  /* no scaling */
-    transition: transform 0.2s ease-out;
+    transition: transform 0.6s ease-out;
     flex-shrink: 0;
-  }  
+  } 
+  
+  .pfp-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 20%;
+    object-fit: cover;
+  }
   
   .hero-img:hover {
-    transform: scaleX(1.1);
+    transform: scaleX(1.5);
   }
 
   .content {
     padding: 80px 120px;
-    max-width: none;
+    max-width: 800px;
+    margin: 0 auto;
+    /* text-align: center; */
   }
   
   h1 {
@@ -58,3 +67,26 @@
     line-height: 1.7;
     color: #888;
   }
+
+  .scroll-arrow {
+    width: 62px;
+    display: block;
+    margin: 40px auto 0;
+    cursor: pointer;
+    animation: bounce 1.6s infinite;
+  }  
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+  
+  #trail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+  }
+  
