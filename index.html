@@ -14,9 +14,11 @@
 
   <nav>
     <div class="header">
-      <a href="#top">renzzheng</a>
-    </div>
+      <a href="#top" id="logo">renzzheng</a>
+    </div>    
     <div class="nav-links">
+      <!-- <a href="#bio">About</a>
+      <span>•</span> -->
       <a href="#projects">Projects</a>
       <span>•</span>
       <a href="#experience">Experience</a>
@@ -68,7 +70,7 @@
           <span>PostgreSQL</span>
           <span>Typescript</span>
           <span>OpenAI Whisper</span>
-          <span>Google Gemini</span>
+          <span>Gemini</span>
           <span>MoviePy</span>
           <span>GCP</span>
         </div>           
@@ -93,14 +95,28 @@
           <span>Pandas</span>
           <span>NumPy</span>
           <span>Pokemon TCG API</span>
+          <span>Streamlit</span>
         </div>
-
-    
+        
         <a href="https://github.com/renzzheng/Pokemon_TCG_Forecast" target="_blank" rel="noopener">
           View GitHub →
         </a>
       </div>
   
+      <!-- <div class="project-card">
+        <div class="card-img-wrapper">
+          <img src="imgs/scan.png" class="card-img" />
+        </div>
+        <h3>Overgrowth</h3>
+        <p>
+          Computer vision for invasive species detection and spread analysis in the Santa Monica Mountains.
+        </p>
+
+        <a href="https://github.com/renzzheng/UPLIFT-The-Elevator-Game" target="_blank" rel="noopener">
+          View GitHub →
+        </a>
+      </div> -->
+
       <div class="project-card">
         <div class="card-img-wrapper">
           <img src="imgs/scannabook.png" class="card-img" />
@@ -168,21 +184,6 @@
         </a>
       </div>
   
-      <div class="project-card">
-        <div class="card-img-wrapper">
-          <img src="imgs/pichu.png" class="card-img" />
-        </div>
-        <h3>The Pichu Website!</h3>
-        <p>
-          My very first website, built using HTML when I was 9.
-        </p>
-
-        <div class="card-stack">
-          <span>HTML</span>
-        </div>
-        
-      </div>
-  
     </div>
   </div>
   
@@ -195,6 +196,9 @@
   
   <canvas id="trail"></canvas>
   <script src="cursor.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <!-- <script src="confetti.js"></script>   -->
 
   <footer id="contact">
     <div class="footer-icons">
