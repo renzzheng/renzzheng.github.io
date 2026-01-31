@@ -112,7 +112,7 @@ html {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
   margin-top: 32px;
-  grid-auto-rows: 380px;
+  grid-auto-rows: auto;
   justify-content: center;
 }
 
@@ -191,7 +191,6 @@ i {
   margin-left: 16px;
   color: #000;
   justify-self: center;
-  display: flex;
   gap: 16px;
 }
 
