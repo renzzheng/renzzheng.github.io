@@ -175,6 +175,17 @@ html {
   color: var(--accent-color);
 }
 
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+}
+
 i {
   font-size: 20px;
   margin-left: 16px;
