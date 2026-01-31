@@ -137,32 +137,36 @@ p {
   flex-direction: column;
   background: #fff;
   padding: 24px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgb(223, 215, 194, 0.5);
 }
 
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 32px rgb(223, 215, 194, 0.8);
 }
 
 /* ========== CARD CONTENT ========== */
-.card-img-wrapper,
-.card-img {
+.card-img-wrapper {
   width: 100%;
-  height: 140px;
-  border-radius: 10px;
-  background: #f0f0f0;
-  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
 }
 
-.card-img-wrapper {
-  overflow: hidden;
-  margin-bottom: 16px;
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: center;
+}
+
+.card-img {
+  transform: scale(1.12);
 }
 
 .project-card h3 {
-  padding-top: 10px;
+  padding-top: 20px;
   margin-bottom: 8px;
   font-size: 18px;
 }
@@ -178,12 +182,28 @@ p {
   padding-top: 12px;
   font-weight: 600;
   text-decoration: none;
-  color: #000;
+  color: var(--accent-color);
   transition: color 0.2s ease;
 }
 
 .project-card a:hover {
-  color: var(--accent-color);
+  opacity: 0.8;
+}
+
+.card-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.card-stack span {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 5px;
+  background: #f2f2f2;
+  color: #666;
+  font-weight: 500;
 }
 
 i {
@@ -227,10 +247,5 @@ footer {
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 20px;
-  }
-
-  .card-img-wrapper,
-  .card-img {
-    height: 120px;
   }
 }
