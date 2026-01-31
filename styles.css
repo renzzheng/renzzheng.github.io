@@ -69,21 +69,28 @@ nav a:hover {
 
 .content {
   padding: 80px 120px;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .content-wide {
   padding: 80px 120px;
-  max-width: 1500px;
+  max-width: 1380px;
   margin: 0 auto;
 }
-
 
 h1 {
   font-size: 48px;
   margin-bottom: 24px;
   font-weight: 800;
+}
+
+#projects h1 {
+  text-align: center;
+}
+
+#experience h1 {
+  text-align: center;
 }
 
 p {
