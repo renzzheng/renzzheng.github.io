@@ -37,19 +37,27 @@
 
   <div class="content" id="bio">
     <h1>About Me</h1>
+  
     <p>
-      Hello, I’m Ren, a recent Computer Science graduate with a Mathematics minor, 
+      Hello, I’m
+      <span class="sparkle-name">
+        Ren Zhi Zheng,
+      <span class="sparkle-layer"></span>
+      </span>
+      a recent Computer Science graduate with a Mathematics minor,
       with experience in applied ML and backend development.
       <br><br>
       I’m particularly interested in computer vision, AI, and full-stack web development,
-       where I enjoy working across both the frontend and backend to turn ideas into
-       tangible and scalable software.
+      where I enjoy working across both the frontend and backend to turn ideas into
+      tangible and scalable software.
       <br><br>
       📍 Los Angeles, California
       <br>
-      🎓 Ursinus College - B.S. Computer Science, Minor in Mathematics '25
+      🎓 Ursinus College – B.S. Computer Science, Minor in Mathematics ’25
     </p>
   </div>
+  
+  <script src="sparkles.js"></script>  
 
   <div class="content-wide" id="projects">
     <h1>Projects</h1>
@@ -136,6 +144,7 @@
           <span>Google Books API</span>
           <span>Flask</span>
           <span>React</span>
+          <span>Next.js</span>
         </div>
 
         <a href="https://github.com/renzzheng/ScannaBook" target="_blank" rel="noopener">
@@ -192,8 +201,37 @@
   
   <div class="content-wide" id="experience">
     <h1>Experience</h1>
-  </div>  
-  
+      <div class="project-card">
+        <h3>Undergraduate AI Research Assistant</h3>
+        <p>
+          Collaborating with Drexel University researchers and leadership from the former
+          MathForum on the MentirAI /
+          <a
+            href="https://encompass.mathematicalthinking.org/#/welcome"
+            target="_blank"
+            rel="noopener"
+            class="inline-link"
+          >
+            EnCoMPASS
+          </a>project.
+          <br><br>
+          Developed automation scripts and backend Python tools to process, clean, and analyze 21,000+ JSON threads of legacy math problems, student solutions, and mentor feedback to support AI model training and evaluation.
+          <br><br>
+          Prototyping RAG systems in Python to generate high-quality mentor feedback.
+        </p>
+        
+        <div class="card-stack">
+          <span>Python</span>
+          <span>AWS EC2</span>
+          <span>AWS S3</span>
+          <span>Linux</span>
+          <span>LLMs</span>
+        </div>
+
+        </a>
+      </div>
+    </div>
+  </div>
   
   <canvas id="trail"></canvas>
   <script src="cursor.js"></script>
