@@ -7,3 +7,6 @@ confetti.js
 
 morning_glory/*
 orchids/*
+
+models/*
+!.gitkeep
