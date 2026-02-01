@@ -1,25 +1,21 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
+// Container
+const container = document.getElementById("model-container");
+
 // Renderer
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, 500);
 renderer.outputColorSpace = THREE.SRGBColorSpace;
-
-document.getElementById("model-container").appendChild(renderer.domElement);
+container.appendChild(renderer.domElement);
 
 // Scene
 const scene = new THREE.Scene();
 
 // Camera
-const camera = new THREE.PerspectiveCamera(
-  50,
-  window.innerWidth / 500,
-  0.1,
-  100
-);
-camera.position.set(0, 1, 3);
+const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 100);
+camera.position.set(0, 1, 1);
 
 // Lighting
 scene.add(new THREE.AmbientLight(0xffffff, 1.2));
@@ -27,6 +23,19 @@ scene.add(new THREE.AmbientLight(0xffffff, 1.2));
 const light = new THREE.DirectionalLight(0xffffff, 1);
 light.position.set(5, 5, 5);
 scene.add(light);
+
+// Resize handler (THE FIX)
+function resize() {
+  const width = container.clientWidth;
+  const height = container.clientHeight;
+
+  renderer.setSize(width, height);
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+}
+
+window.addEventListener("resize", resize);
+resize();
 
 // Load GLTF
 const loader = new GLTFLoader();
@@ -58,13 +67,6 @@ document.addEventListener("mousemove", (e) => {
   if (!model) return;
   model.rotation.y = (e.clientX / window.innerWidth - 0.5) * 1.2;
   model.rotation.x = (e.clientY / window.innerHeight - 0.5) * 0.6;
-});
-
-// Resize
-window.addEventListener("resize", () => {
-  camera.aspect = window.innerWidth / 500;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, 500);
 });
 
 // Render loop
