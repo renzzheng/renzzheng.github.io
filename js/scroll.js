@@ -1,3 +1,4 @@
+// thank you thilan 🙏
 document.addEventListener("DOMContentLoaded", () => {
     const arrow = document.querySelector(".scroll-arrow");
     if (!arrow) return;

@@ -29,17 +29,33 @@
   
     <div class="nav-links">
       <a href="#projects">Projects</a>
-      <span>•</span>
+      <span>|</span>
       <a href="#experience">Experience</a>
-      <span>•</span>
+      <span>|</span>
       <a href="#contact">Contact</a>
     </div>
   </nav>
   
+  <!-- <div id="model-container"></div> -->
 
   <div class="hero">
     <img src="imgs/avatar_cropped.png" class="hero-img" />
   </div>
+
+  <!-- <div id="title">
+    <div id="title-text">
+      <h1>Ren·Zhi Zheng</h1>
+      <p>Software Engineer · ML · Computer Vision</p>
+    </div>
+  </div> -->
+  
+  <!-- <div class="hero">
+    <img src="imgs/name.png" class="hero-img" />
+  </div> -->
+
+  <!-- <div class="hero">
+    <img src="imgs/avatar_cropped.png" class="hero-img" />
+  </div> -->
 
   <div class="scroll-arrow" onclick="document.getElementById('bio').scrollIntoView({ behavior: 'smooth' })">
     ▼
@@ -67,8 +83,6 @@
       Open to work <span class="green-dot">•</span> 
     </p>
   </div>
-  
-  <script src="sparkles.js"></script>  
 
   <div class="content-wide" id="projects">
     <h1>Projects</h1>
@@ -215,7 +229,7 @@
       <div class="project-card">
         <h3>Undergraduate AI Research Assistant</h3>
         <p>
-          MentirAI ( Ursinus College x Drexel University × MathForum x
+          MentirAI: Ursinus College x Drexel University × MathForum x
           <a
             href="https://encompass.mathematicalthinking.org/#/welcome"
             target="_blank"
@@ -223,7 +237,7 @@
             class="inline-link"
           >
             EnCoMPASS
-          </a>)
+          </a>
           <br><br>
           Developed automation scripts and backend Python tools to process, clean, and analyze 21,000+ JSON threads of legacy math problems, student solutions, and mentor feedback to support AI model training and evaluation.
           <br><br>
@@ -242,15 +256,14 @@
       </div>
     </div>
   </div>
-  
-  <!-- <div id="model-container"></div> -->
 
   <canvas id="trail"></canvas>
   <script src="cursor.js"></script>
-  <script src="scroll.js"></script>
+  <script src="./js/scroll.js"></script>
+  <script src="./js/sparkles.js"></script>  
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <script type="module" src="./model.js"></script>
+  <script type="module" src="./js/model.js"></script>
 
   <footer id="contact">
     <div class="footer-icons">

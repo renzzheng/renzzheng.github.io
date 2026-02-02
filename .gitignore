@@ -2,11 +2,12 @@
 
 cursor.js
 confetti.js
+./js/*
 
 /imgs/pencil.glb
 
 morning_glory/*
 orchids/*
+persimmon/*
 
-models/*
-!.gitkeep
+models/
