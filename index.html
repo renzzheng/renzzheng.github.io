@@ -26,16 +26,16 @@
     <div class="header">
       <a href="#top" id="logo">renzzheng</a>
     </div>    
+  
     <div class="nav-links">
-      <!-- <a href="#bio">About</a>
-      <span>•</span> -->
       <a href="#projects">Projects</a>
       <span>•</span>
       <a href="#experience">Experience</a>
       <span>•</span>
       <a href="#contact">Contact</a>
     </div>
-  </nav>  
+  </nav>
+  
 
   <div class="hero">
     <img src="imgs/avatar_cropped.png" class="hero-img" />
@@ -215,8 +215,7 @@
       <div class="project-card">
         <h3>Undergraduate AI Research Assistant</h3>
         <p>
-          Collaborating with Drexel University researchers and leadership from the former
-          MathForum on the MentirAI /
+          MentirAI (Drexel University × MathForum x
           <a
             href="https://encompass.mathematicalthinking.org/#/welcome"
             target="_blank"
@@ -224,11 +223,12 @@
             class="inline-link"
           >
             EnCoMPASS
-          </a>project.
+          </a>) project
+          2025.01 — Now
           <br><br>
-          Developed automation scripts and backend Python tools to process, clean, and analyze 21,000+ JSON threads of legacy math problems, student solutions, and mentor feedback to support AI model training and evaluation.
+          Built Python tools for large-scale educational dialogue datasets (90k+ JSON threads), 
+          focusing on deduplication, rubric extraction, and evaluation tooling for downstream RAG model training.
           <br><br>
-          Prototyping RAG systems in Python to generate high-quality mentor feedback.
         </p>
         
         <div class="card-stack">
@@ -245,9 +245,10 @@
   </div>
   
   <!-- <div id="model-container"></div> -->
-
+   
   <canvas id="trail"></canvas>
   <script src="cursor.js"></script>
+  <script src="scroll.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script type="module" src="./model.js"></script>
