@@ -65,7 +65,8 @@ nav a:hover {
 
 /* ========== HERO ========== */
 .hero {
-  min-height: 60vh;
+  padding-top: 130px;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,7 +108,6 @@ nav a:hover {
 
   text-align: center;
   pointer-events: none;
-  transform: translateY(-1rem);
 }
 
 /* Canvas ON TOP */
@@ -126,8 +126,39 @@ nav a:hover {
 }
 
 #title-text p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   opacity: 0.7;
+  line-height: 1.1;
+
+  background: linear-gradient(
+    120deg,
+    #ef856d,  /* base */
+    #e8745b,  /* deeper coral */
+    #d45a3f,  /* garnet / clay */
+    #f09a84,  /* warm glow highlight */
+    #ef856d   /* base */
+  );  
+
+  background-size: 300% 300%;
+
+  /* clip gradient to text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  animation: aurora 8s ease-in-out infinite;
+}
+
+@keyframes aurora {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 

@@ -45,7 +45,7 @@ const loader = new GLTFLoader();
 let model;
 
 loader.load(
-  "./persimmon/persimmon.gltf",
+  "./models/persimmon/persimmon.gltf",
   (gltf) => {
     model = gltf.scene;
 
