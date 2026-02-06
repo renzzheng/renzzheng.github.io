@@ -5,3 +5,5 @@ confetti.js
 ./js/*
 
 /imgs/pencil.glb
+
+/models/*
