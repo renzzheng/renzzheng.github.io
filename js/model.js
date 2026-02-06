@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { MeshoptDecoder } from "three/addons/libs/meshopt_decoder.module.js";
 
 // Container
 const container = document.getElementById("model-container");
@@ -42,10 +43,11 @@ resize();
 
 // Load GLTF
 const loader = new GLTFLoader();
+loader.setMeshoptDecoder(MeshoptDecoder);
 let model;
 
 loader.load(
-  "./models/persimmon/persimmon.glb",
+  "./models/persimmon/persimmon_compressed.glb",
   (gltf) => {
     model = gltf.scene;
 
