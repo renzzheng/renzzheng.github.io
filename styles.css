@@ -261,7 +261,6 @@ p {
 /* ========== PROJECT GRID ========== */
 .projects-grid {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   margin-top: 32px;
@@ -436,7 +435,6 @@ footer::before {
 .sparkle-name {
   position: relative;
   display: inline-block;
-  font-weight: 700;
   line-height: 1;
 }
 
