@@ -296,7 +296,8 @@ p {
 
 /* Card Content */
 .card-img-wrapper {
-  width: 100%;
+  width: calc(100% + 48px);
+  margin: -24px -24px 0 -24px;
   aspect-ratio: 16 / 9;
   overflow: hidden;
 }
