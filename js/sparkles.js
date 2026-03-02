@@ -1,5 +1,4 @@
 // adapted from @simonlejeune's SparklesText into HTML/CSS/JS
-
 document.addEventListener("DOMContentLoaded", () => {
     const layer = document.querySelector(".sparkle-layer");
     if (!layer) return;

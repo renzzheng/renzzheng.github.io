@@ -20,9 +20,9 @@ const pivot = new THREE.Group();
 scene.add(pivot);
 
 // Camera
-const camera = new THREE.PerspectiveCamera(100, 1, 0.01, 1000);
+const camera = new THREE.PerspectiveCamera(45, 1, 0.01, 500);
 
-// Lighting (glass NEEDS contrast)
+// Lighting
 scene.add(new THREE.AmbientLight(0xffffff, 0.6));
 
 const light = new THREE.DirectionalLight(0xffffff, 2);
@@ -55,18 +55,6 @@ loader.load(
       if (child.isMesh) {
         child.castShadow = true;
         child.receiveShadow = true;
-
-        // // Apply glass-like material
-        // child.material = new THREE.MeshPhysicalMaterial({
-        //   color: new THREE.Color(1.0, 0.75, 0.45),
-        //   roughness: 0.1,
-        //   metalness: 0.0,
-        //   clearcoat: 1.0,
-        //   clearcoatRoughness: 0.15,
-        //   transparent: true,
-        //   opacity: 0.25,
-        //   side: THREE.DoubleSide
-        // });
       }
     });
 
@@ -108,7 +96,7 @@ window.addEventListener("mousemove", (e) => {
   targetOffset.x = -ny * 0.12;
   targetOffset.y = -nx * 0.25;
 
-  // --- Mouse velocity (THIS is the magic) ---
+  // --- Mouse velocity ---
   const dx = e.clientX - lastMouseX;
   const dy = e.clientY - lastMouseY;
 

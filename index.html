@@ -20,10 +20,9 @@
   </script>
 </head>
 <body>
-
   <div id="top"></div>
 
-
+  <!-- NAV BAR -->
   <nav>
     <div class="header">
       <a href="#top" id="logo">renzzheng</a>
@@ -37,17 +36,27 @@
       <a href="#experience">Experience</a>
     </div>
   </nav>
-  
-  <!-- <div id="model-container"></div> -->
 
+  <!-- HERO -->
   <div class="hero">
-    <!-- <img src="imgs/avatar_cropped.png" class="hero-img" id="hero-img" alt="avatar"/> -->
+    <div class="hero-gradient"></div>
     <div id="model-container"></div>
-      <div id="title">
-        <div id="title-text">
-          <h1>Ren Zhi Zheng</h1>
-          <p>Software Engineer · Machine Learning</p>
-          <br>
+    <h1 class="hero-heading">Ren Zhi Zheng</h1>
+    <p class="hero-sub">Software Engineer · Machine Learning</p>
+
+          <!-- location specs -->
+          <div class="hero-info">
+            <div class="hero-info-row">
+              <i class="fa-solid fa-location-dot"></i>
+              Los Angeles, CA
+            </div>
+            <div class="hero-info-row">
+              <i class="fa-solid fa-clock"></i>
+              <span id="localTime">--:-- UTC -08:00</span>
+            </div>
+          </div>
+          <script src="./js/timer.js"></script>
+
           <div class="hero-icons">
             <a href="https://github.com/renzzheng" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
             <a href="https://linkedin.com/in/renzzheng" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
@@ -57,37 +66,32 @@
     </div>
   </div>
 
-  <!-- <script src = "./js/switch.js"></script> -->
-
   <div class="scroll-arrow" onclick="document.getElementById('bio').scrollIntoView({ behavior: 'smooth' })">
-    ▼
+    &#9660;
   </div>
 
+  <!-- ABOUT -->
   <div class="content" id="bio">
-    <h1>About</h1>
-  
+    <div class="section-label"><span>About</span></div>
     <p>
-      Hello, I’m
+      Hello, I'm
       <span class="sparkle-name">
         Ren Zhi Zheng,
-      <span class="sparkle-layer"></span>
+        <span class="sparkle-layer"></span>
       </span>
-      a recent Computer Science graduate with a Mathematics minor,
-      with experience in applied machine learning and backend development.
+      a Computer Science graduate with a Mathematics minor. 
+      I enjoy working on problems where software has a direct, tangible connection to the real world, 
+      particularly through integrated AI features and backend infrastructure.
       <br><br>
-      <!-- I’m particularly interested in computer vision, machine learning, and full-stack web development,
-      where I enjoy turning ideas into tangible and scalable software.
-      <br><br> -->
-      📍 Los Angeles, California
+      &#x1F4CD; Los Angeles, California
       <br>
-      🎓 B.S. Computer Science, Minor in Mathematics '25
-      <br>
-      <span class="green-dot">•</span> Available for work
+      &#x1F393; B.S. Computer Science, Minor in Mathematics '25
     </p>
   </div>
 
+  <!-- PROJECTS -->
   <div class="content-wide" id="projects">
-    <h1>Projects</h1>
+    <div class="section-label"><span>Projects</span></div>
     <div class="projects-grid">
   
       <div class="project-card">
@@ -109,6 +113,7 @@
           <span>Flask</span>
           <span>React</span>
           <span>Next.js</span>
+          <span>Gemini</span>
         </div>
 
         <a href="https://github.com/renzzheng/ScannaBook" target="_blank" rel="noopener">
@@ -145,7 +150,7 @@
   
       <div class="project-card">
         <div class="card-img-wrapper">
-          <img src="imgs/mapit.png" class="card-img" />
+          <img src="imgs/mapit_page.png" class="card-img" />
         </div>
         <h3>Map It</h3>
         <p>
@@ -153,11 +158,10 @@
         </p>
 
         <div class="card-stack">
-          <span>Python</span>
-          <span>Node.js</span>
+          <span>Next.js</span>
           <span>Express</span>
           <span>TypeScript</span>
-          <span>Vite</span>
+          <span>React</span>
           <span>Google Maps Platform APIs</span>
         </div>
 
@@ -235,26 +239,24 @@
     </div>
   </div>
   
+  <!-- EXPERIENCE -->
   <div class="content-wide" id="experience">
-    <h1>Experience</h1>
-      <div class="project-card">
+    <div class="section-label"><span>Experience</span></div>
+
+    <div class="exp-card">
+      <div class="exp-left">
+        <span>MentirAI:</span>
+        <span>Ursinus College ×</span>
+        <span>Drexel University ×</span>
+        <span>MathForum ×</span>
+        <a href="https://encompass.mathematicalthinking.org/#/welcome" target="_blank" rel="noopener" class="exp-link">EnCoMPASS</a>
+      </div>
+      <div class="exp-right">
         <h3>Undergraduate AI Research Assistant</h3>
-        <p>
-          MentirAI: Ursinus College x Drexel University × MathForum x
-          <a
-            href="https://encompass.mathematicalthinking.org/#/welcome"
-            target="_blank"
-            rel="noopener"
-            class="inline-link"
-          >
-            EnCoMPASS
-          </a>
-          <br><br>
-          Developed automation scripts and backend Python tools to process, clean, and analyze 21,000+ JSON threads of legacy math problems, student solutions, and mentor feedback to support AI model training and evaluation.
-          <br><br>
-          Prototyping RAG systems in Python to generate high-quality mentor feedback.
-        </p>
-        
+        <ul class="exp-bullets">
+          <li>Developed automation scripts and backend Python tools to process, clean, and analyze 21,000+ JSON threads of legacy math problems, student solutions, and mentor feedback to support AI model training and evaluation.</li>
+          <li>Prototyping RAG systems in Python to generate high-quality mentor feedback.</li>
+        </ul>
         <div class="card-stack">
           <span>Python</span>
           <span>Pandas</span>
@@ -263,8 +265,6 @@
           <span>Linux</span>
           <span>LLMs</span>
         </div>
-
-        </a>
       </div>
     </div>
   </div>
@@ -274,7 +274,6 @@
   <script src="./js/scroll.js"></script>
   <script src="./js/sparkles.js"></script>  
 
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script type="module" src="./js/model.js"></script>
 
   <footer id="contact">
