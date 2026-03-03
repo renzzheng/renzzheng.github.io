@@ -517,6 +517,42 @@ footer {
   .exp-card { grid-template-columns: 1fr; gap: 16px; }
 }
 
+/* ========== STAMPS ========== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.stamp-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.stamp-frame .photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 2px;
+  z-index: 2;
+  opacity: 0.92;
+}
+
+.stamp-frame .frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+
 /* ========== ICONS & FOOTER ========== */
 i {
   font-size: 16px;
