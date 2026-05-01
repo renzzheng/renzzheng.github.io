@@ -5,7 +5,10 @@
   --accent-color: rgb(239, 133, 109);
 }
 
-html { scroll-behavior: smooth; }
+html { 
+  scroll-behavior: smooth; 
+  /* zoom: 0.8; */
+}
 
 body {
   background: #fff;
@@ -13,6 +16,9 @@ body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  /* transform: scale(0.8);
+  transform-origin: top left;
+  width: 125%; */
 }
 
 
@@ -68,23 +74,24 @@ nav::before {
 
 nav a {
   text-decoration: none;
-  color: #000000;
+  color: #2D1F1A;
 }
 
 nav a:hover {
-  opacity: 0.6;
+  color: rgb(190, 80, 55);
 }
 
 .nav-links {
-  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 13px;
   letter-spacing: 0.04em;
 }
 
 .nav-links span {
-  margin: 0 6px;
-  color: #000000;
+  color: #c9b9b3;
 }
-
 
 /* ========== HERO ========== */
 .hero {
@@ -142,7 +149,7 @@ nav a:hover {
   font-weight: 800;
   letter-spacing: -1.5px;
   line-height: 1.1;
-  color: #1a1210;
+  color: #2D1F1A;
   margin-bottom: 8px;
 }
 
@@ -158,7 +165,7 @@ nav a:hover {
   align-items: center;
   gap: 7px;
   font-size: 13.5px;
-  color: rgba(210, 80, 45, 0.65);
+  color: rgba(102, 43, 26, 0.65);
 }
 .hero-info-row .fa-solid {
   font-size: 11px;
@@ -223,6 +230,7 @@ nav a:hover {
   to   { opacity: 1; }
 }
 
+/* staggered fade-up animations for hero elements */
 .model-container   { animation: fadeUp 0.6s 0.05s ease both; }
 .hero-heading      { animation: fadeUp 0.6s 0.2s  ease both; }
 .hero-sub          { animation: fadeUp 0.6s 0.35s ease both; }
@@ -344,13 +352,13 @@ p {
   color: var(--accent-color);
   transition: opacity 0.15s;
 }
-.project-card a:hover { opacity: 0.7; }
+.project-card a:hover { color: #b83a1e; }
 
 .inline-link {
   color: var(--accent-color);
   text-decoration: none;
 }
-.inline-link:hover { opacity: 0.8; }
+.inline-link:hover { color: #b83a1e; }
 
 #projects.content-wide {
   max-width: 1200px;
@@ -390,7 +398,7 @@ footer {
   text-decoration: none;
   transition: opacity 0.15s;
 }
-.footer-icon-btn:hover { opacity: 0.7; }
+.footer-icon-btn:hover { color: #b83a1e; }
 
 
 /* ========== SPARKLE EFFECT ========== */
@@ -482,7 +490,7 @@ footer {
   text-decoration: none;
   transition: opacity 0.15s;
 }
-.exp-link:hover { opacity: 0.7; }
+.exp-link:hover { color: #b83a1e; }
 
 .exp-right h3 {
   font-size: 16px;
@@ -521,7 +529,7 @@ footer {
 .grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 8px;
+  gap: 2px;
 }
 
 .stamp-frame {
@@ -540,7 +548,6 @@ footer {
   object-fit: cover;
   border-radius: 2px;
   z-index: 2;
-  opacity: 0.92;
 }
 
 .stamp-frame .frame {
@@ -552,6 +559,52 @@ footer {
   z-index: 1;
 }
 
+/* ========== STAMP HOVER LABEL ========== */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+.stamp-frame::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70%;
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.stamp-frame::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(5px, 1.1vw, 7px);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.stamp-frame:hover::before,
+.stamp-frame:hover::after {
+  opacity: 1;
+}
+
+.stamp-frame:hover {
+  transform: scale(1.08);
+  z-index: 10;
+  transition: transform 0.2s ease;
+}
 
 /* ========== ICONS & FOOTER ========== */
 i {
@@ -583,7 +636,7 @@ i {
 }
 .footer-icons i:hover,
 .hero-icons i:hover {
-  opacity: 0.6;
+  color: #b83a1e;
 }
 
 /* ========== RESPONSIVE ========== */

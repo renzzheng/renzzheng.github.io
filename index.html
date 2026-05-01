@@ -41,7 +41,11 @@
   <div class="hero">
     <div class="hero-gradient"></div>
     <div id="model-container"></div>
-    <h1 class="hero-heading">Ren Zhi Zheng</h1>
+    <!-- <canvas id="halftone-canvas"></canvas> -->
+    <span class="sparkle-name">
+      <h1 class="hero-heading">Ren Zhi Zheng</h1>
+      <span class="sparkle-layer"></span>
+    </span>
     <p class="hero-sub">Software Engineer · Machine Learning</p>
 
           <!-- location specs -->
@@ -51,7 +55,6 @@
               Los Angeles, CA
             </div>
             <div class="hero-info-row">
-              <i class="fa-solid fa-clock"></i>
               <span id="localTime">--:-- UTC -08:00</span>
             </div>
           </div>
@@ -83,11 +86,12 @@
       a Computer Science graduate with a Mathematics minor. 
       I enjoy working on problems where software has a direct, tangible connection to the real world, 
       particularly through integrated AI features and backend infrastructure.
-      <br><br>
-      &#x1F4CD; Los Angeles, California
+      <br>
+      <!-- &#x1F4CD; Los Angeles, California -->
       <br>
       &#x1F393; B.S. Computer Science, Minor in Mathematics '25
     </p>
+     <!-- <div id="model-container"></div> -->
   </div>
 
   <!-- PROJECTS -->
@@ -95,6 +99,57 @@
     <div class="section-label"><span>Projects</span></div>
     <div class="projects-grid">
   
+      <!-- <div class="project-card">
+        <div class="card-img-wrapper">
+          <img src="imgs/junk.png" class="card-img" />
+        </div>
+        <h3>Bindery</h3>
+        <p>
+          Collaborative digital journal platform for creating junk journals, importing sketchbooks or journal PDFs, and building shared scrapbooks with an analog-inspired flippable page experience.
+        </p>
+
+        <div class="card-stack">
+          <span>Python</span>
+          <span>Flask</span>
+          <span>React</span>
+          <span>Next.js</span>
+          <span>TypeScript</span>
+          <span>Tailwind</span>
+        </div>
+        
+        <a href="https://github.com/renzzheng/Pokemon_TCG_Forecast" target="_blank" rel="noopener">
+          View GitHub →
+        </a>
+      </div> -->
+
+      <div class="project-card">
+        <div class="card-img-wrapper">
+          <img src="imgs/tiktalk_page.png" class="card-img" />
+        </div>
+        <h3>TikTalk</h3>
+        <p>
+          AI-powered video generation pipeline that converts lecture files into short-form scripts, narration, captions, and edited clips using Kafka-based microservices.
+        </p>
+        
+        <div class="card-stack">
+          <span>Python</span>
+          <span>Kafka</span>
+          <span>Flask</span>
+          <span>React</span>
+          <span>Next.js</span>
+          <span>PostgreSQL</span>
+          <span>Typescript</span>
+          <span>OpenAI Whisper</span>
+          <span>Gemini</span>
+          <span>MoviePy</span>
+          <span>GCP</span>
+        </div>           
+
+        <a href="https://github.com/renzzheng/TikTalk" target="_blank" rel="noopener">
+          View GitHub →
+        </a>
+      </div>
+
       <div class="project-card">
         <div class="card-img-wrapper">
           <img src="imgs/scannabook.png" class="card-img" />
@@ -114,6 +169,8 @@
           <span>Flask</span>
           <span>React</span>
           <span>Next.js</span>
+          <span>TypeScript</span>
+          <span>Tailwind</span>
           <span>Gemini</span>
         </div>
 
@@ -124,49 +181,19 @@
 
       <div class="project-card">
         <div class="card-img-wrapper">
-          <img src="imgs/tiktalk_page.png" class="card-img" />
+          <img src="imgs/puzzles.png" class="card-img" />
         </div>
-        <h3>TikTalk</h3>
+        <h3>Jigsaw Puzzle Solver</h3>
         <p>
-          AI-powered TikTok video generation pipeline using Kafka-based microservices
-          by processing lecture files.
+          Computer vision jigsaw puzzle solver that segments puzzle pieces from images, extracts edge contours, classifies tabs/blanks/flats, and reconstructs small puzzles using shape and color matching.
         </p>
-        
+
         <div class="card-stack">
           <span>Python</span>
-          <span>Kafka</span>
-          <span>Flask</span>
-          <span>PostgreSQL</span>
-          <span>Typescript</span>
-          <span>OpenAI Whisper</span>
-          <span>Gemini</span>
-          <span>MoviePy</span>
-          <span>GCP</span>
-        </div>           
-
-        <a href="https://github.com/renzzheng/TikTalk" target="_blank" rel="noopener">
-          View GitHub →
-        </a>
-      </div>
-  
-      <div class="project-card">
-        <div class="card-img-wrapper">
-          <img src="imgs/mapit_page.png" class="card-img" />
+          <span>OpenCV</span>
         </div>
-        <h3>Map It</h3>
-        <p>
-          Mapping and geocoding tool built with Google Maps APIs to visualize and batch extract location data.
-        </p>
-
-        <div class="card-stack">
-          <span>Next.js</span>
-          <span>Express</span>
-          <span>TypeScript</span>
-          <span>React</span>
-          <span>Google Maps Platform APIs</span>
-        </div>
-
-        <a href="https://github.com/renzzheng/MapIT" target="_blank" rel="noopener">
+        
+        <a href="https://github.com/renzzheng/jigsaw-puzzle-solver" target="_blank" rel="noopener">
           View GitHub →
         </a>
       </div>
@@ -191,7 +218,29 @@
         <a href="https://github.com/renzzheng/hangul" target="_blank" rel="noopener">
           View GitHub →
         </a>
-      </div>     
+      </div>
+  
+      <div class="project-card">
+        <div class="card-img-wrapper">
+          <img src="imgs/mapit_page.png" class="card-img" />
+        </div>
+        <h3>Map It</h3>
+        <p>
+          Batch geocoding and mapping tool that extracts location data, visualizes results on Google Maps, and helps users clean or export geographic datasets.
+        </p>
+
+        <div class="card-stack">
+          <span>Next.js</span>
+          <span>Express</span>
+          <span>TypeScript</span>
+          <span>React</span>
+          <span>Google Maps Platform APIs</span>
+        </div>
+
+        <a href="https://github.com/renzzheng/MapIT" target="_blank" rel="noopener">
+          View GitHub →
+        </a>
+      </div>
 
       <!-- <div class="project-card">
         <div class="card-img-wrapper">
@@ -235,11 +284,10 @@
         <a href="https://github.com/renzzheng/UPLIFT-The-Elevator-Game" target="_blank" rel="noopener">
           View GitHub →
         </a>
-      </div> 
-  
+      </div>
     </div>
   </div>
-  
+
   <!-- EXPERIENCE -->
   <div class="content-wide" id="experience">
     <div class="section-label"><span>Experience</span></div>
@@ -257,6 +305,8 @@
         <ul class="exp-bullets">
           <li>Developed automation scripts and backend Python tools to process, clean, and analyze 21,000+ JSON threads of legacy math problems, student solutions, and mentor feedback to support AI model training and evaluation.</li>
           <li>Prototyping RAG systems in Python to generate high-quality mentor feedback.</li>
+          <li>Audited JSON data, identified labeling errors, draft submissions, null responses, and duplicate IDs, and built a Python
+            script to extract clean student-mentor interaction pairs for downstream RAG and LLM fine-tuning.</li>
         </ul>
         <div class="card-stack">
           <span>Python</span>
@@ -271,93 +321,55 @@
   </div>
 
   <div class="content-wide" id="experience">
-    <div class="section-label"><span>Misc.<span></div>
-      <p style="font-size: 14px; text-align: center;">Native flora and critters photographed around SoCal + JPN + PA.</p>
-      <br>
-      <!-- <img src="../imgs/054.gif" alt="My GIF" center style="display: block; margin: 0 auto; object-fit: cover;"> -->
-      <div class="grid">
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp0.png" alt="">
+    <div class="section-label"><span>Misc.</span></div>
+    <p style="font-size: 14px; text-align: center;">Collection of photographed native flora and critters.</p>
+    <br>
+    <div class="grid" id="stamp-grid"></div>
+  </div>
+  
+  <script>
+    const stamps = [
+      { img: "stamp0",  label: "Santa Monica MT" },
+      { img: "stamp1",  label: "Karuizawa" },
+      { img: "stamp2",  label: "Oami" },
+      { img: "stamp3",  label: "Santa Monica MT" },
+      { img: "stamp4",  label: "Obuse" },
+      { img: "stamp5",  label: "Oami" },
+      { img: "stamp6",  label: "Oami" },
+      { img: "stamp7",  label: "Oami" },
+      { img: "stamp22", label: "Nagano" },
+      { img: "stamp12", label: "Santa Monica MT" },
+      { img: "stamp11", label: "Laguna Beach" },
+      { img: "stamp13", label: "Santa Monica MT" },
+      { img: "stamp14", label: "Santa Monica MT" },
+      { img: "stamp15", label: "Collegeville" },
+      { img: "stamp16", label: "Santa Monica MT" },
+      { img: "stamp17", label: "Oami" },
+      { img: "stamp19", label: "Joshua Tree" },
+      { img: "stamp20", label: "Malibu" },
+      { img: "stamp23", label: "Chiba" },
+      { img: "stamp18", label: "Santa Monica MT" },
+      { img: "stamp29", label: "La Jolla Cove" },
+      { img: "stamp24", label: "Tokyo" },
+      { img: "stamp25", label: "Joshua Tree" },
+      { img: "stamp27", label: "Santa Monica MT" },
+      { img: "stamp30", label: "Collegeville" },
+      { img: "stamp32", label: "Death Valley" },
+      { img: "stamp39", label: "New York City" },
+      { img: "stamp31", label: "Antelope Valley" },
+      { img: "stamp38", label: "Santa Monica MT" },
+      { img: "stamp36", label: "Red Rock Canyon" }
+    ];
+  
+    const grid = document.getElementById("stamp-grid");
+    stamps.forEach(({ img, label }) => {
+      grid.innerHTML += `
+        <div class="stamp-frame" data-label="${label}">
+          <img class="photo" src="imgs/${img}.png" alt="${label}">
           <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp1.png" alt="">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp2.png" alt="">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp3.png" alt="">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp4.png" alt="">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp5.png" alt="">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp6.png" alt="">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp7.png" alt="">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp8.png" alt="">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp9.png" alt="">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp10.png" alt="">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp11.png" alt="">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp12.png" alt="">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp13.png" alt="">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp14.png" alt="">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp15.png" alt="">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp16.png" alt="">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp17.png" alt="">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp18.png" alt="">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-        <div class="stamp-frame">
-          <img class="photo" src="imgs/stamp19.png" alt="">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>
-      </div>
-    </div>
+        </div>`;
+    });
+  </script>
   
   <!-- SCRIPTS -->
   <script src="cursor.js"></script>
