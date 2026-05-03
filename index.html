@@ -80,18 +80,16 @@
       <br>
       Hello, I'm
       <span class="sparkle-name">
-        Ren Zhi Zheng,
+        Ren!
         <span class="sparkle-layer"></span>
       </span>
-      a Computer Science graduate with a Mathematics minor. 
-      I enjoy working on problems where software has a direct, tangible connection to the real world, 
-      particularly through integrated AI features and backend infrastructure.
       <br>
-      <!-- &#x1F4CD; Los Angeles, California -->
+      I'm a recent graduate drawn to software with a direct, tangible connection to the real world, bridging code with analog problems.
+      At my core, I adore the process of creating, so I believe the best software is built with as much thoughtful design as it is logic.
+      <br>
       <br>
       &#x1F393; B.S. Computer Science, Minor in Mathematics '25
     </p>
-     <!-- <div id="model-container"></div> -->
   </div>
 
   <!-- PROJECTS -->
@@ -324,54 +322,13 @@
     <div class="section-label"><span>Misc.</span></div>
     <p style="font-size: 14px; text-align: center;">Collection of photographed native flora and critters.</p>
     <br>
-    <div class="grid" id="stamp-grid"></div>
+    <div class="scroll-strip">
+      <div class="scroll-track" id="misc-track"></div>
+    </div>
   </div>
   
-  <script>
-    const stamps = [
-      { img: "stamp0",  label: "Santa Monica MT" },
-      { img: "stamp1",  label: "Karuizawa" },
-      { img: "stamp2",  label: "Oami" },
-      { img: "stamp3",  label: "Santa Monica MT" },
-      { img: "stamp4",  label: "Obuse" },
-      { img: "stamp5",  label: "Oami" },
-      { img: "stamp6",  label: "Oami" },
-      { img: "stamp7",  label: "Oami" },
-      { img: "stamp22", label: "Nagano" },
-      { img: "stamp12", label: "Santa Monica MT" },
-      { img: "stamp11", label: "Laguna Beach" },
-      { img: "stamp13", label: "Santa Monica MT" },
-      { img: "stamp14", label: "Santa Monica MT" },
-      { img: "stamp15", label: "Collegeville" },
-      { img: "stamp16", label: "Santa Monica MT" },
-      { img: "stamp17", label: "Oami" },
-      { img: "stamp19", label: "Joshua Tree" },
-      { img: "stamp20", label: "Malibu" },
-      { img: "stamp23", label: "Chiba" },
-      { img: "stamp18", label: "Santa Monica MT" },
-      { img: "stamp29", label: "La Jolla Cove" },
-      { img: "stamp24", label: "Tokyo" },
-      { img: "stamp25", label: "Joshua Tree" },
-      { img: "stamp27", label: "Santa Monica MT" },
-      { img: "stamp30", label: "Collegeville" },
-      { img: "stamp32", label: "Death Valley" },
-      { img: "stamp39", label: "New York City" },
-      { img: "stamp31", label: "Antelope Valley" },
-      { img: "stamp38", label: "Santa Monica MT" },
-      { img: "stamp36", label: "Red Rock Canyon" }
-    ];
-  
-    const grid = document.getElementById("stamp-grid");
-    stamps.forEach(({ img, label }) => {
-      grid.innerHTML += `
-        <div class="stamp-frame" data-label="${label}">
-          <img class="photo" src="imgs/${img}.png" alt="${label}">
-          <img class="frame" src="imgs/stamp.png" alt="">
-        </div>`;
-    });
-  </script>
-  
   <!-- SCRIPTS -->
+  <script src="misc.js" defer></script>
   <script src="cursor.js"></script>
   <script src="./js/scroll.js"></script>
   <script src="./js/sparkles.js"></script>

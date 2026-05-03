@@ -7,7 +7,7 @@
 
 html { 
   scroll-behavior: smooth; 
-  /* zoom: 0.8; */
+  zoom: 0.8;
 }
 
 body {
@@ -95,13 +95,13 @@ nav a:hover {
 
 /* ========== HERO ========== */
 .hero {
-  min-height: 100vh;
+  min-height: 52vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px 24px 120px 24px;
+  padding: 40px 24px 72px 24px;
   position: relative;
   overflow: hidden;
 }
@@ -139,26 +139,26 @@ nav a:hover {
 
 /* persimmon model container */
 #model-container {
-  width: 110px;
-  height: 110px;
+  width: 80px;
+  height: 80px;
   overflow: hidden;
 }
 
 .hero-heading {
-  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
   font-weight: 800;
   letter-spacing: -1.5px;
   line-height: 1.1;
   color: #2D1F1A;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .hero-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
-  margin-bottom: 24px;
+  gap: 4px;
+  margin-bottom: 16px;
 }
 .hero-info-row {
   display: flex;
@@ -183,7 +183,7 @@ nav a:hover {
 }
 .hero-sub {
   font-size: 1.1rem;
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 
   background: linear-gradient(
     120deg,
@@ -263,14 +263,14 @@ nav a:hover {
 
 /* ========== CONTENT ========== */
 .content {
-  padding: 80px 120px;
-  max-width: 1000px;
+  padding: 48px 120px;
+  max-width: 1200px;
   margin: 0 auto;
   font-size: 0.85rem;
 }
 .content-wide {
-  padding: 80px 120px;
-  max-width: 1000px;
+  padding: 48px 120px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -295,7 +295,7 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
-  margin-top: 32px;
+  margin-top: 16px;
 }
 @media (max-width: 1100px) {
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
@@ -446,7 +446,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 .section-label span {
   font-size: 11px;
@@ -469,7 +469,7 @@ footer {
   display: grid;
   grid-template-columns: 160px 1fr;
   gap: 32px;
-  padding: 28px 0;
+  padding: 18px 0;
 }
 .exp-card + .exp-card { border-top: 1px solid #e8e8e5; }
 
@@ -637,6 +637,51 @@ i {
 .footer-icons i:hover,
 .hero-icons i:hover {
   color: #b83a1e;
+}
+
+/* ========== MISC SCROLL STRIP ========== */
+.scroll-strip {
+  overflow: hidden;
+  position: relative;
+}
+.scroll-strip::before,
+.scroll-strip::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 60px;
+  z-index: 2;
+  pointer-events: none;
+}
+.scroll-strip::before {
+  left: 0;
+  background: linear-gradient(to right, #fff, transparent);
+}
+.scroll-strip::after {
+  right: 0;
+  background: linear-gradient(to left, #fff, transparent);
+}
+.scroll-track {
+  display: flex;
+  gap: 6px;
+  width: max-content;
+  animation: scroll-left 60s linear infinite;
+}
+/* .scroll-track:hover {
+  animation-play-state: paused;
+} */
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.photo-thumb {
+  width: 72px;
+  height: 72px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  overflow: hidden;
+  object-fit: cover;
+  display: block;
 }
 
 /* ========== RESPONSIVE ========== */
