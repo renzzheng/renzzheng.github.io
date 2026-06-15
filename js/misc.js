@@ -17,6 +17,7 @@ const stamps = [
     { img: "stamp16", label: "Santa Monica MT" },
     { img: "stamp17", label: "Oami" },
     { img: "stamp19", label: "Joshua Tree" },
+    { img: "stamp41", label: "Santa Monica MT" },
     { img: "stamp20", label: "Malibu" },
     { img: "stamp23", label: "Chiba" },
     { img: "stamp18", label: "Santa Monica MT" },

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ren Zheng Portfolio</title>
   <link rel="icon" type="image/x-icon" href="imgs/icon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
@@ -183,7 +184,7 @@
         </div>
         <h3>Jigsaw Puzzle Solver</h3>
         <p>
-          Computer vision jigsaw puzzle solver that segments puzzle pieces from images, extracts edge contours, classifies tabs/blanks/flats, and reconstructs small puzzles using shape and color matching.
+          Computer vision jigsaw puzzle solver that segments puzzle pieces from images, extracts edge contours, classifies pieces, and reconstructs small puzzles using edge matching.
         </p>
 
         <div class="card-stack">
@@ -202,7 +203,7 @@
         </div>
         <h3>Hangul: Korean Popup Dictionary</h3>
         <p>
-          Chrome extension that shows instant Korean-to-English definitions on hover, adapted from an open-source dictionary and redesigned for Korean parsing.
+          Chrome extension that shows instant Korean-to-English definitions on hover, adapted from an open-source dictionary, Zhongwen, and redesigned for Korean parsing.
         </p>
       
         <div class="card-stack">
@@ -217,7 +218,30 @@
           View GitHub →
         </a>
       </div>
-  
+
+      <div class="project-card">
+        <div class="card-img-wrapper">
+          <img src="imgs/water.png" class="card-img" />
+        </div>
+        <h3>Bottled Ocean</h3>
+        <p>
+          Interactive fluid simulator built using a 1D shallow-water model (Saint-Venant).
+          Rotating the container tilts gravity and sloshes the water, while turbulence scales with CPU load via WebSocket.
+        </p>
+      
+        <div class="card-stack">
+          <span>JavaScript</span>
+          <span>Python</span>
+          <span>WebSocket</span>
+          <span>HTML</span>
+          <span>CSS</span>
+        </div>
+      
+        <a href="https://github.com/renzzheng/water-sim" target="_blank" rel="noopener">
+          View GitHub →
+        </a>
+      </div>
+      
       <div class="project-card">
         <div class="card-img-wrapper">
           <img src="imgs/mapit_page.png" class="card-img" />
@@ -293,8 +317,8 @@
     <div class="exp-card">
       <div class="exp-left">
         <span>MentirAI:</span>
-        <span>Ursinus College ×</span>
-        <span>Drexel University ×</span>
+        <span><a href="https://www.ursinus.edu/" target="_blank" rel="noopener" class="exp-link">Ursinus College</a> ×</span>
+        <span><a href="https://drexel.edu/" target="_blank" rel="noopener" class="exp-link">Drexel University</a> x</span>
         <span>MathForum ×</span>
         <a href="https://encompass.mathematicalthinking.org/#/welcome" target="_blank" rel="noopener" class="exp-link">EnCoMPASS</a>
       </div>

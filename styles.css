@@ -117,10 +117,10 @@ nav a:hover {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 90% 80% at -8% 50%, rgba(232, 112, 74, 0.4) 0%, transparent 58%),
-    radial-gradient(ellipse 80% 120% at 110% 30%, rgba(255, 210, 140, 0.35) 0%, transparent 60%),
-    radial-gradient(ellipse 100% 70% at 50% 120%, rgba(200, 130, 220, 0.45) 0%, transparent 55%),
-    radial-gradient(ellipse 70% 80% at 110% 90%, rgba(120, 180, 255, 0.4) 0%, transparent 55%);
+  radial-gradient(ellipse 90% 80%  at -8% 50%,   rgba(240, 140, 110, 0.5)  0%, transparent 58%),
+  radial-gradient(ellipse 80% 120% at 110% 30%,  rgba(250, 210, 190, 0.45) 0%, transparent 60%),
+  radial-gradient(ellipse 100% 70% at 50%  120%, rgba(160, 155, 200, 0.45) 0%, transparent 55%),
+  radial-gradient(ellipse 70% 80%  at 110% 90%,  rgba(245, 185, 160, 0.35) 0%, transparent 55%);
   background-color: #fdf6f0;
 }
 
@@ -431,6 +431,18 @@ footer {
   100% { opacity: 0; transform: scale(0) rotate(150deg); }
 }
 
+/* Keep the inline About-name sparkle at normal paragraph size. */
+#bio .sparkle-name {
+  display: inline-block;
+  font-size: inherit !important;
+  line-height: inherit;
+  vertical-align: baseline;
+}
+
+#bio .sparkle-layer {
+  inset: -0.75em;
+}
+
 
 /* ========== ABOUT ========== */
 #bio p {
@@ -691,4 +703,27 @@ i {
   h1 { font-size: 36px; }
   .projects-grid { grid-template-columns: 1fr; gap: 20px; }
   nav { padding: 12px 20px; }
+
+  #projects.content-wide {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #projects .section-label {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #projects .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+  }
+
+  #projects .project-card {
+    width: 100%;
+  }
 }
