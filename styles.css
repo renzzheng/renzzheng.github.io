@@ -7,7 +7,7 @@
 
 html { 
   scroll-behavior: smooth; 
-  zoom: 0.8;
+  zoom: 0.75;
 }
 
 body {
@@ -272,6 +272,11 @@ nav a:hover {
   padding: 48px 120px;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.keio-logo {
+  width: 120px;
+  height: auto;
 }
 
 /* ========== TYPOGRAPHY ========== */

@@ -47,7 +47,7 @@ loader.setMeshoptDecoder(MeshoptDecoder);
 let model;
 
 loader.load(
-  "./models/persimmon/persimmon-optimized.glb",
+  "./models/persimmon/persimmon.glb",
   (gltf) => {
     model = gltf.scene;
 
