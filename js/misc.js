@@ -30,7 +30,8 @@ const stamps = [
     { img: "stamp40", label: "Santa Monica MT" },
     { img: "stamp31", label: "Antelope Valley" },
     { img: "stamp38", label: "Santa Monica MT" },
-    { img: "stamp36", label: "Red Rock Canyon" }
+    { img: "stamp36", label: "Red Rock Canyon" },
+    { img: "stamp42", label: "Malibu" } 
   ];
   
   const track = document.getElementById('misc-track');
