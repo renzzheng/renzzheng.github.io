@@ -136,7 +136,7 @@ nav a:hover {
   max-width: var(--desktop-frame-width);
   margin-inline: auto;
 
-  background-image: url("../imgs/CLOUDSS.JPG");
+  background-image: url("imgs/CLOUDSS.JPG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
