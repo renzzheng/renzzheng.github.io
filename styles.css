@@ -554,25 +554,75 @@ p {
   font-weight: 500;
 }
 
-
 /* ========== FOOTER ========== */
 footer {
-  border-top: 1px solid #e8e8e5;
-  padding: 24px 40px;
-  background: #fff;
+  width: min(100%, var(--desktop-frame-width));
+  max-width: var(--desktop-frame-width);
+  margin-inline: auto;
+
+  min-height: 110px;
+  padding: 56px 24px 26px;
+
+  position: relative;
+  overflow: hidden;
+
+  border: none;
 }
-.footer-inner {
+
+footer::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image: url("imgs/clud.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.footer-icons {
+  position: absolute;
+  z-index: 1;
+
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 16px;
 }
-.footer-icon-btn {
+
+.footer-icons a {
   color: var(--accent-color);
-  font-size: 16px;
   text-decoration: none;
-  transition: opacity 0.15s;
+
+  transition:
+    color 0.15s ease,
+    transform 0.15s ease;
 }
-.footer-icon-btn:hover { color: #b83a1e; }
+
+.footer-icons a:visited {
+  color: var(--accent-color);
+}
+
+.footer-icons i {
+  font-size: 20px;
+}
+
+.footer-icons .fa-envelope {
+  font-size: 19px;
+}
+
+.footer-icons a:hover {
+  color: #b83a1e;
+  transform: translateY(-2px);
+}
 
 
 /* ========== SPARKLE EFFECT ========== */
@@ -794,13 +844,14 @@ footer {
 /* ========== ICONS & FOOTER ========== */
 i {
   font-size: 16px;
-  color: var(--accent-color)
+  color: var(--accent-color);
 }
 
 .footer-icons,
 .hero-icons {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 16px;
 }
 
@@ -811,14 +862,14 @@ i {
 
 .hero-icons i {
   color: var(--accent-color);
-  transition: opacity 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .footer-icons i {
-  transition: opacity 0.2s ease;
-  color: var(--accent-color)
-
+  color: inherit;
+  transition: color 0.2s ease;
 }
+
 .footer-icons i:hover,
 .hero-icons i:hover {
   color: #b83a1e;
@@ -871,6 +922,13 @@ i {
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   nav           { padding-inline: 32px; }
+
+  footer {
+    min-height: 130px;
+    padding: 40px 20px 20px;
+    background-position: center top;
+  }
+
   .content      { padding: 48px 32px; }
   .content-wide { padding: 48px 32px; }
   h1 { font-size: 36px; }
