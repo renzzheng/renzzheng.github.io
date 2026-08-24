@@ -702,30 +702,54 @@ footer::before {
 /* ========== EXPERIENCE ========== */
 .exp-card {
   display: grid;
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: 180px 1fr;
   gap: 32px;
   padding: 18px 0;
 }
-.exp-card + .exp-card { border-top: 1px solid #e8e8e5; }
+
+@media (max-width: 450px) {
+  .exp-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.exp-card + .exp-card {
+  border-top: 1px solid #e8e8e5;
+}
 
 .exp-left {
   display: flex;
   flex-direction: column;
   gap: 4px;
   padding-top: 2px;
-}
-.exp-left span {
+
   font-size: 13.5px;
-  color: #9b9b9b;
   line-height: 1.6;
+  color: #9b9b9b;
 }
+
+.exp-org {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.exp-x {
+  color: #9b9b9b;
+}
+
 .exp-link {
   font-size: 13.5px;
   color: var(--accent-color);
   text-decoration: none;
-  transition: opacity 0.15s;
+  transition: color 0.15s;
 }
-.exp-link:hover { color: #b83a1e; }
+
+.exp-link:hover {
+  color: #b83a1e;
+}
 
 .exp-right h3 {
   font-size: 16px;
@@ -733,6 +757,7 @@ footer::before {
   color: #1a1a1a;
   margin-bottom: 12px;
 }
+
 .exp-bullets {
   list-style: none;
   display: flex;
@@ -740,6 +765,7 @@ footer::before {
   gap: 10px;
   margin-bottom: 16px;
 }
+
 .exp-bullets li {
   font-size: 14.5px;
   color: rgba(30, 20, 15, 0.6);
@@ -747,6 +773,7 @@ footer::before {
   padding-left: 16px;
   position: relative;
 }
+
 .exp-bullets li::before {
   content: '·';
   position: absolute;
@@ -754,10 +781,6 @@ footer::before {
   color: #9b9b9b;
   font-size: 18px;
   line-height: 1.4;
-}
-
-@media (max-width: 600px) {
-  .exp-card { grid-template-columns: 1fr; gap: 16px; }
 }
 
 /* ========== STAMPS ========== */
