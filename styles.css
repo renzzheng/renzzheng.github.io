@@ -980,3 +980,30 @@ i {
     width: 100%;
   }
 }
+
+
+/* ========== UNIFIED PAGE WIDTH ========== */
+nav,
+.hero,
+.content,
+.content-wide,
+#projects.content-wide,
+footer {
+    width: calc(100% - 64px);
+    max-width: var(--desktop-frame-width);
+    margin-inline: auto;
+}
+
+.content,
+.content-wide,
+#projects.content-wide {
+    padding: 48px 0;
+}
+
+@media (max-width: 768px) {
+  nav,
+  .hero,
+  footer {
+      width: 100%;
+  }
+}
